@@ -1,0 +1,78 @@
+@import 'variables';
+@import 'mixins';
+
+.special{
+    padding-bottom: $space-48;
+    margin-bottom: $space-48;
+    &__row{
+        justify-content: center;
+        margin-bottom: $space-48;
+    }
+
+    &__title{
+        position: relative;
+
+        &::before{
+            @include separatedTitle
+        }
+    }
+    &__topic{
+        @include topic
+
+    }
+
+    &__wrapper{
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+
+        &:hover .special__img{
+            transform: scale(1.2);
+        }
+
+        &:hover  .special__price-wrapper{
+            border-color: $white;
+            background-color: transparent;
+        }
+    }
+
+    &__img{
+        width: 100%;
+        height: 600px;
+        filter: brightness(70%);
+        transition: all 0.2s linear;
+    }
+
+    &__content{
+        position: absolute;
+        width: 100%;
+        top:50%;
+        @include display(flex,center);
+        flex-direction: column;
+        align-items: center;
+        transform: translateY(-50%);
+        padding: 10px;
+    }
+
+    &__price{
+        margin: 0;
+        color: $white;
+        font-weight: 700;
+        font-size: $special-size;
+        &-wrapper{
+            @include display(flex,center);
+            align-items: center;
+            @include square(100px,100px);
+            background-color: $primary;
+            margin-bottom: $space-16;
+            transition: all 0.2s linear;
+        }
+    }
+
+    &__name{
+        text-align: center;
+        color: $white;
+        font-size: $special-size;
+        font-weight: 700;
+    }
+}

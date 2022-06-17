@@ -1,0 +1,63 @@
+@import 'variables';
+@import 'mixins';
+
+.testi{
+    margin: $padding-content 0;
+    background-color: $white;
+
+
+    &__row{
+        @include display(flex,center);
+        padding-bottom: $space-48;
+        margin-bottom: $space-48;
+    }
+
+    &__title{
+        position: relative;
+
+        &::before{
+            @include separatedTitle
+        }
+    }
+
+    &__topic{
+        @include topic;
+
+    }
+
+    &__comment{
+        font-size: $topic-size;
+        font-weight: 400;
+        color: #000;
+        margin-bottom: $space-16;
+    }
+
+    &__talker{
+        @include display(flex,flex-start)
+    }
+
+    &__ava{
+        @include square;
+        object-fit: cover;
+        margin-right: 24px;
+    }
+
+    &__info{
+        @include display(flex, center);
+        flex-direction: column;
+    }
+
+    &__name{
+        font-size: $name-size;
+        color: #000;
+        margin:0;
+    }
+
+    &__position{
+        margin:0;
+    }
+}
+
+.swiper__row{
+    justify-content: center;
+}

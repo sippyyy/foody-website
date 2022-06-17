@@ -1,0 +1,52 @@
+@import 'variables';
+@import 'mixins';
+
+.restaurant{
+    padding: $padding-content 0;
+    &__row{
+        margin-bottom: $space-48;
+    }
+
+    &__title{
+        position: relative;
+
+        &::before{
+            @include separatedTitle
+        }
+    }
+
+    &__row{
+        justify-content: center;
+    }
+    &__topic{
+        @include topic;
+        position:relative
+    }
+    &__desc{
+        font-size: $name-size;
+        margin-bottom: 2rem;
+    }
+
+    &__imgs{
+        &-row{
+            align-items: center;
+        }
+    }
+
+    &__img-block2{
+        flex-direction: column;
+    }
+
+    &__img-vertical{
+        width: 100%;
+        max-height: 480px;
+    }
+
+    &__img-landscape{
+        width: 100%;
+        max-height:250px;
+        & + .restaurant__img-landscape{
+            margin-top: $space-30
+        }
+    }
+}

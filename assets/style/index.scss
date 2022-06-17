@@ -1,0 +1,55 @@
+@import 'variables';
+@import 'mixins';
+@import 'header';
+@import 'slider';
+@import 'services';
+@import 'restaurant';
+@import 'special';
+@import 'menu';
+@import 'testimonial';
+@import 'blog';
+@import 'footer';
+
+*{
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    width: 100%;
+    overflow-X: hidden;
+}
+
+body{
+    font-size: $text-size;
+    color: $text-color;
+}
+
+ul{
+    list-style-type: none;
+    padding:0;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+    color: $white;
+}
+
+button{
+    outline: none;
+}
+
+.center{
+    text-align: center;
+}
+
+.white{
+    color: $white;
+}
+
+.row-reverse{
+    flex-direction: row-reverse;
+}

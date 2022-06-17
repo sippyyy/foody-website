@@ -1,0 +1,71 @@
+.footer{
+    padding: 75px 0;
+    &__heading-row{
+        justify-content: center;
+        margin-bottom: $space-48;
+
+    }
+
+    &__title{
+        color: #000;
+        margin-bottom: 20px;
+        font-weight: 700;
+    }
+
+    &__sub-heading{
+        margin-bottom: $space-16;
+    }
+
+    &__form{
+        display: flex;
+        margin-bottom: $space-48;
+    }
+
+    &__input{
+        padding: $space-8;
+        width: 70%;
+        border: 1px solid $text-color;
+        outline: none;
+        margin-right: $space-8;
+    }
+
+    &__button{
+        @include Button(5px, 10px, 2px, solid, transparent, $primary, $white);
+        flex:1;
+        font-size: 1.2rem;
+        letter-spacing: 2px;
+    }
+
+    &__row{
+        margin-bottom: $space-48;
+    }
+
+    &__icon{
+        margin-top: $space-48;
+        &-item{
+            color: $primary;
+            &+ .footer__icon-item{
+                margin-left: $space-8
+            }
+        }
+    }
+
+    &__part{
+        margin-bottom: $space-16
+    }
+
+    &__key{
+        color: #000;
+        margin:0;
+    }
+    li{
+        margin-bottom: $space-16;
+    }
+    &__link{
+        color: $primary;
+    }
+
+    &__copyright{
+        margin: 0;
+    }
+}

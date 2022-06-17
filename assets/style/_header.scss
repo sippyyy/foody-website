@@ -1,0 +1,101 @@
+@import 'variables';
+@import 'mixins';
+
+.header{
+    height: $header-height;
+    width: 100%;
+    background-color: transparent;
+    position: absolute;
+    align-self: center;
+    margin: $space-30 0;
+    z-index: 1000;;
+
+    &__container{
+        @include display(flex,space-between);
+        align-items: center;
+        height: 100%;
+    }
+    
+    &__logo{
+        width: 100%;
+        height: 100%;
+        transform: translateY(7px);
+    }
+
+    &__list{
+        @include display(flex,center);
+        height: 100%;
+        align-items: center;
+        padding: 0 $space-30
+    }
+
+    &__item{
+        position: relative;
+
+        &:hover .header__subnav{
+            display: block;
+        }
+    }
+
+    &__item + .header__item{
+        padding-left: $space-30
+    }
+
+    &__nav-link{
+        font-size: $name-size;
+    }
+
+    &__button{
+        @include display(flex,center);
+        height: 100%;
+        align-items: center;
+        & button{
+            @include Button;
+            font-weight:500;
+        }
+    }
+
+    &__subnav{
+        position: absolute;
+        width: 225%;
+        top: 220%;
+        background-color: $white;
+        color: rgb(182, 39, 39);
+        border-radius: 8px;
+        left: 20px;
+        display: none;
+
+        &:before{
+            content: '';
+            position: absolute;
+            width: 0; 
+            height: 0; 
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-bottom: 8px solid $white;
+            top: -8px;
+            left: 30px;
+        }
+
+        &:after{
+            content:'';
+            width: 40%;
+            height: 40px;
+            background-color: transparent;
+            position: absolute;
+            top:-30px;
+        }
+    }
+}
+
+.sub__nav-item{
+    padding: $space-8;
+    color: $text-color;
+    &:hover{
+        color: $primary
+    }
+
+}
+.row{
+    height: 100%;
+}

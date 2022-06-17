@@ -1,0 +1,38 @@
+@import 'mixins';
+@import 'variables';
+
+.services{
+    padding: $space-30 0;
+    position: relative;    
+    background-color: $darkerWhite;
+    z-index: 2;
+
+    &__icon{
+        color: $white;
+        &-wrapper{
+            @include square;
+            background-color: $primary;
+            border-radius: 100%;
+            @include display(flex,center);
+            align-items:center;
+            margin-bottom: $space-30;
+        }
+    }
+    &__tag{
+        font-weight: 300;
+        letter-spacing: 2.5px;
+        color: $primary;
+        margin-bottom: $space-8;
+    }
+
+    &__desc{
+        margin-bottom: $space-16
+    }
+
+    &::after{
+        @include separatedBlock($darkerWhite);
+        z-index:-1;
+    }
+
+
+}
