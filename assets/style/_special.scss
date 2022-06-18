@@ -38,9 +38,10 @@
 
     &__img{
         width: 100%;
-        height: 600px;
+        max-height: 487px;
         filter: brightness(70%);
         transition: all 0.2s linear;
+        object-fit: cover;
     }
 
     &__content{

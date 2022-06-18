@@ -7,8 +7,14 @@
     background-color: $darkerWhite;
     z-index: 2;
 
+    &__row{
+        margin-bottom: $space-16;
+    }
+
     &__icon{
-        color: $white;
+        img{
+            width: 30px;
+        }
         &-wrapper{
             @include square;
             background-color: $primary;
@@ -33,6 +39,5 @@
         @include separatedBlock($darkerWhite);
         z-index:-1;
     }
-
 
 }

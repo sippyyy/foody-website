@@ -2,7 +2,9 @@
 @import 'mixins';
 
 .restaurant{
-    padding: $padding-content 0;
+    // padding: $padding-content 0;
+    position: relative;
+    z-index: 2;
     &__row{
         margin-bottom: $space-48;
     }
@@ -28,6 +30,7 @@
     }
 
     &__imgs{
+        margin-bottom: $space-48;
         &-row{
             align-items: center;
         }

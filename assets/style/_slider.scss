@@ -49,10 +49,48 @@
     &__button{
         @include Button(10px, 15px, 1px, solid , #fff, transparent, #fff);
         letter-spacing: 2.5px;
-    }
+        overflow: hidden;
+        position: relative;
+        transition: all 0.2s linear;
 
-    &::after{
-        @include separatedBlock($darkerWhite);
+        &::after{
+            content: '';
+            height: 120%;
+            width: 60%;
+            top:0;
+            right:-8%;
+            background-color: $white;
+            position: absolute;
+            transform: skew(-20deg) translateX(100%);
+            transition: all 0.2s linear;
+
+        }
+
+        &::before{
+            content:'';
+            width: 60%;
+            height: 120%;
+            background-color: $white;
+            top:0;
+            left:-8%;
+            position: absolute;
+            transform: skew(-20deg) translateX(-100%);
+            transition: all 0.2s linear;
+        }
+
+        &:hover{
+            color: $primary;
+            &::before{
+                transform: skew(-20deg) translateX(0);
+                z-index: -1;
+            }
+            &::after{
+                transform: skew(-20deg) translateX(0);
+                z-index: -1;
+            }
+
+
+        }
     }
 
 

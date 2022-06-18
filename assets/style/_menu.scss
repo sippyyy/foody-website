@@ -5,15 +5,7 @@
     margin: $padding-content 0;
     position: relative;
     background-color: $darkerWhite;
-    &::before{
-        @include separatedBlock($darkerWhite);
-        z-index:-1;
-    }
-
-    &::after{
-        @include separatedBlock($darkerWhite);
-        z-index:-1;
-    }
+    z-index: 3;
 
     &__row{
         justify-content: center;

@@ -9,6 +9,7 @@
 @import 'testimonial';
 @import 'blog';
 @import 'footer';
+@import './aboutus/chef';
 
 *{
     padding: 0;
@@ -36,10 +37,18 @@ ul{
 a{
     text-decoration: none;
     color: $white;
+
+    &:hover{
+        color: $white;
+    }
 }
 
 button{
     outline: none;
+}
+
+.active{
+    color: $primary
 }
 
 .center{
@@ -53,3 +62,38 @@ button{
 .row-reverse{
     flex-direction: row-reverse;
 }
+
+.none-margin-top{
+    margin-top: 0;
+}
+
+.beforeGray{
+    &::before{
+        @include separatedBlock($darkerWhite);
+        z-index:-1;
+        top:0;
+    }
+}
+
+.afterGray{
+    &::after{
+        @include separatedBlock($darkerWhite);
+        z-index:-1;
+    }
+}
+
+.beforeWhite{
+    &::before{
+        @include separatedBlock($white);
+        z-index:-1;
+        top:0;
+    }
+}
+
+.afterWhite{
+    &::after{
+        @include separatedBlock($white);
+        z-index:-1;
+    }
+}
+
