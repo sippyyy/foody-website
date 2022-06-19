@@ -19,14 +19,26 @@
     &__form{
         display: flex;
         margin-bottom: $space-48;
+
+        &-message{
+            margin: 0;
+            text-align: left;
+            color: $primary;
+        }
+
+        &-block{
+            @include display(flex,flex-start);
+            flex-direction: column;
+            width: 70%;
+            margin-right: $space-8;
+        }
     }
 
     &__input{
         padding: $space-8;
-        width: 70%;
+        width: 100%;
         border: 1px solid $text-color;
         outline: none;
-        margin-right: $space-8;
     }
 
     &__button{
@@ -42,16 +54,20 @@
 
     &__icon{
         margin-top: $space-48;
+
+        a + a{
+            margin-left: $space-8
+        }
+
         &-item{
-            color: $primary;
-            &+ .footer__icon-item{
-                margin-left: $space-8
-            }
+            width: 20px;
         }
     }
 
     &__part{
-        margin-bottom: $space-16
+        margin-bottom: $space-16;
+
+
     }
 
     &__key{

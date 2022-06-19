@@ -10,6 +10,7 @@
 @import 'blog';
 @import 'footer';
 @import './aboutus/chef';
+@import './contact/contact-form';
 
 *{
     padding: 0;
@@ -26,6 +27,8 @@ html{
 body{
     font-size: $text-size;
     color: $text-color;
+    width: 100%;
+    overflow-X: hidden;
 }
 
 ul{
@@ -95,5 +98,9 @@ button{
         @include separatedBlock($white);
         z-index:-1;
     }
+}
+
+.gray{
+    background-color: $darkerWhite;
 }
 

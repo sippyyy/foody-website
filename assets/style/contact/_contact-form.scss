@@ -1,0 +1,82 @@
+@import '../variables';
+@import '../mixins';
+
+.contact{
+    padding: 80px 0;
+    position: relative;
+    z-index: 2;
+
+    &__form{
+        margin-bottom: $space-30;
+
+
+    }
+
+    &__form-row{
+        height: unset;
+    }
+
+    &__block{
+        @include display(flex,flex-start);
+        align-items: flex-start;
+        flex-direction: column;
+        margin-top: $space-30;
+    }
+
+    &__title{
+        margin-bottom: $space-8;
+    }
+    &__input{
+        border: 1px solid rgb(206, 203, 203);
+        width: 100%;
+        padding: 10px;
+        outline: none;
+        &.active{
+            border-color:$primary ;
+        }
+    }
+    &__message{
+        color: $primary
+    }
+
+    &__submit{
+        margin-top: $space-16;
+        @include Button
+    }
+
+    &__detail{
+        @include display(flex,center);
+
+        &-wrapper{
+            width: 70%;
+        }
+    }
+    &__topic{
+        font-size: $special-size;
+        font-weight: 400;
+        margin-bottom: $space-30;
+        color: #000;
+    }
+
+    &__section{
+        @include display(flex,flex-start);
+        align-items: center;
+        margin-bottom: $space-30;
+    }
+
+    &__icon{
+        margin-right: $space-16;
+        margin-bottom: 0;
+        @include display(flex,center);
+        align-items: center;
+        width: 25px;
+    }
+
+    &__desc{
+        margin-bottom: 0;
+        color: #000;
+        font-size: $topic-size;
+        font-weight: 300;
+    }
+
+}

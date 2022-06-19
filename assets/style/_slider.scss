@@ -33,10 +33,15 @@
     }
 
     &__title{
-        font-size: $text-slider;
+        @include textSlider($text-slider);
         color:$white;
         font-weight: 800; 
         margin-bottom: $space-8;
+        transition: font-size 0.4s linear;
+
+        @media (max-width:768px) {
+            @include textSlider(4rem)
+        }
     }
 
     &__desc{

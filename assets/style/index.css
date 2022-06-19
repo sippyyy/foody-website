@@ -27,6 +27,20 @@
   -o-object-fit: contain;
      object-fit: contain;
 }
+.header__control {
+  display: none;
+  position: fixed;
+  right: 10px;
+  top: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: black;
+  cursor: pointer;
+  transition: all 0.4s linear;
+}
+.header__control-btn {
+  width: 25px;
+}
 .header__right {
   height: 100%;
   flex: 1;
@@ -48,7 +62,7 @@
   position: relative;
 }
 .header__item:hover .header__subnav {
-  display: block;
+  opacity: 1;
 }
 .header__item + .header__item {
   padding-left: 30px;
@@ -81,7 +95,8 @@
   color: rgb(182, 39, 39);
   border-radius: 8px;
   left: 20px;
-  display: none;
+  opacity: 0;
+  transition: all 0.4s linear;
 }
 .header__subnav:before {
   content: "";
@@ -151,6 +166,12 @@
   color: #fff;
   font-weight: 800;
   margin-bottom: 8px;
+  transition: font-size 0.4s linear;
+}
+@media (max-width: 768px) {
+  .slider__title {
+    font-size: 4rem;
+  }
 }
 .slider__desc {
   font-size: 2rem;
@@ -251,6 +272,7 @@
 }
 
 .restaurant {
+  margin: 225px 0;
   position: relative;
   z-index: 2;
 }
@@ -279,6 +301,11 @@
   font-weight: 800;
   color: #000;
   position: relative;
+}
+@media (max-width: 768px) {
+  .restaurant__topic {
+    font-size: 4rem;
+  }
 }
 .restaurant__desc {
   font-size: 1.6rem;
@@ -331,6 +358,11 @@
   font-size: 5rem;
   font-weight: 800;
   color: #000;
+}
+@media (max-width: 768px) {
+  .special__topic {
+    font-size: 4rem;
+  }
 }
 .special__wrapper {
   width: 100%;
@@ -418,6 +450,11 @@
   font-weight: 800;
   color: #000;
 }
+@media (max-width: 768px) {
+  .menu__topic {
+    font-size: 4rem;
+  }
+}
 .dish {
   padding: 16px;
   background-color: #fff;
@@ -473,6 +510,11 @@
   font-size: 5rem;
   font-weight: 800;
   color: #000;
+}
+@media (max-width: 768px) {
+  .testi__topic {
+    font-size: 4rem;
+  }
 }
 .testi__comment {
   font-size: 2rem;
@@ -542,6 +584,11 @@
   font-weight: 800;
   color: #000;
 }
+@media (max-width: 768px) {
+  .blog__topic {
+    font-size: 4rem;
+  }
+}
 .blog__img {
   width: 100%;
   height: 300px;
@@ -593,12 +640,23 @@
   display: flex;
   margin-bottom: 48px;
 }
+.footer__form-message {
+  margin: 0;
+  text-align: left;
+  color: #ff7404;
+}
+.footer__form-block {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 70%;
+  margin-right: 8px;
+}
 .footer__input {
   padding: 8px;
-  width: 70%;
+  width: 100%;
   border: 1px solid #868e96;
   outline: none;
-  margin-right: 8px;
 }
 .footer__button {
   padding: 5px 10px;
@@ -615,11 +673,11 @@
 .footer__icon {
   margin-top: 48px;
 }
-.footer__icon-item {
-  color: #ff7404;
-}
-.footer__icon-item + .footer__icon-item {
+.footer__icon a + a {
   margin-left: 8px;
+}
+.footer__icon-item {
+  width: 20px;
 }
 .footer__part {
   margin-bottom: 16px;
@@ -667,6 +725,11 @@
   font-weight: 800;
   color: #000;
 }
+@media (max-width: 768px) {
+  .chef__topic {
+    font-size: 4rem;
+  }
+}
 .chef__block {
   width: 100%;
 }
@@ -697,6 +760,80 @@
   margin: 0;
 }
 
+.contact {
+  padding: 80px 0;
+  position: relative;
+  z-index: 2;
+}
+.contact__form {
+  margin-bottom: 30px;
+}
+.contact__form-row {
+  height: unset;
+}
+.contact__block {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-top: 30px;
+}
+.contact__title {
+  margin-bottom: 8px;
+}
+.contact__input {
+  border: 1px solid rgb(206, 203, 203);
+  width: 100%;
+  padding: 10px;
+  outline: none;
+}
+.contact__input.active {
+  border-color: #ff7404;
+}
+.contact__message {
+  color: #ff7404;
+}
+.contact__submit {
+  margin-top: 16px;
+  padding: 10px 15px;
+  border: 2px solid transparent;
+  background-color: #ff7404;
+  color: #fff;
+}
+.contact__detail {
+  display: flex;
+  justify-content: center;
+}
+.contact__detail-wrapper {
+  width: 70%;
+}
+.contact__topic {
+  font-size: 2.3rem;
+  font-weight: 400;
+  margin-bottom: 30px;
+  color: #000;
+}
+.contact__section {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.contact__icon {
+  margin-right: 16px;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+}
+.contact__desc {
+  margin-bottom: 0;
+  color: #000;
+  font-size: 2rem;
+  font-weight: 300;
+}
+
 * {
   padding: 0;
   border: 0;
@@ -712,6 +849,8 @@ html {
 body {
   font-size: 1.4rem;
   color: #868e96;
+  width: 100%;
+  overflow-X: hidden;
 }
 
 ul {
@@ -812,4 +951,8 @@ button {
   margin: 0;
   z-index: 1;
   z-index: -1;
+}
+
+.gray {
+  background-color: #f8f9fa;
 }/*# sourceMappingURL=index.css.map */

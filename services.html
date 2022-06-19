@@ -23,17 +23,20 @@
               <div class="header__left">
                 <a href="./index.html"><img src="./assets/img/logo.png" alt="" class="header__logo"></a>
               </div>
+              <div class="header__control">
+                  <img src="./assets/img/menu.png" alt="" class="header__control-btn">
+              </div>
               <div class="header__right">
                 <div class="header__navlist header__navlist-row ">
                   <ul class="header__list">
                     <li class="header__item">
-                      <a href="./index.html" class="header__nav-link">Home</a>
+                      <a href="./index.html" class="header__nav-link ">Home</a>
                     </li>
                     <li class="header__item">
                       <a href="./recipes.html" class="header__nav-link">Recipes</a>
                     </li>
                     <li class="header__item">
-                      <a href="#" class="header__nav-link active">Services</a>
+                      <a href="./services.html" class="header__nav-link active">Services</a>
                       <div class="header__subnav">
                         <ul class="sub__navlist">
                           <li class="sub__nav-item">Food Catering</li>
@@ -50,7 +53,7 @@
                     </li>
                   </ul>
                   <div class="header__button">
-                    <button><a href="./contact.html">CONTACT</a></button>
+                    <button><a href="./contact.html"><a href="./contact.html">CONTACT</a></a></button>
                   </div>
                 </div>
               </div>
@@ -342,7 +345,10 @@
                   <h4 class="footer__title">Subcribe Newsletter</h4>
                   <p class="footer__sub-heading">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur odit aut rerum hic minima, inventore harum eos vero, reiciendis doloribus, consectetur ab facere aspernatur nihil. Deleniti aut totam enim dolorum!</p>
                   <form action="" class="footer__form">
-                    <input type="text" id="email" class="footer__input " placeholder="Enter Email Address">
+                    <div class="footer__form-block">
+                      <input id="email" type="text" id="email" class="footer__input " placeholder="Enter Email Address">
+                      <p class="footer__form-message "></p>
+                    </div>
                     <button class="footer__button ">SUBSCRIBE</button>
                   </form>
                 </div>
@@ -354,10 +360,10 @@
                   <p class="footer__title">About Us</p>
                   <p class="footer__desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum maiores culpa sunt dolorem saepe pariatur cum odit! Enim, quod reprehenderit alias consequatur sit nemo, sequi doloribus, voluptatem mollitia expedita laboriosam.</p>
                   <div class="footer__icon">
-                    <a href="" class="footer__icon-item">icon</a>
-                    <a href="" class="footer__icon-item">icon</a>
-                    <a href="" class="footer__icon-item">icon</a>
-                    <a href="" class="footer__icon-item">icon</a>
+                  <a href=""><img class="footer__icon-item" src="./assets/img/twitter.png" alt=""></a>
+                  <a href=""><img class="footer__icon-item" src="./assets/img/facebook.png" alt=""></a>
+                  <a href=""><img class="footer__icon-item" src="./assets/img/linkedin.png" alt=""></a>
+                  <a href=""><img class="footer__icon-item" src="./assets/img/instagram.png" alt=""></a>
                   </div>
                 </div>
   
@@ -413,5 +419,23 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     <script src="./javascipt/slider.js"></script>
+    <script src="./javascipt/header.js"></script>
+    <script src="./javascipt/validation.js"></script>
+    <script>
+      Validator({
+        form:'.footer__form',
+        input:'.footer__input',
+        formGroupSelect:'.footer__form-block',
+        errorSelector: '.footer__form-message',
+        rules:[
+          Validator.isRequired('#email'),
+          Validator.isEmail('#email')
+        ],
+        onSubmit:(data)=>{
+          console.log(data)
+        }
+
+      })
+    </script>
 </body>
 </html>

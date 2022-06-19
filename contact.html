@@ -18,44 +18,47 @@
 
         <!-- HEADER -->
         <div class="header">
-            <div class="container header__container">
-              <div class="header__row">
-                <div class="header__left">
-                  <a href="./index.html"><img src="./assets/img/logo.png" alt="" class="header__logo"></a>
-                </div>
-                <div class="header__right">
-                  <div class="header__navlist header__navlist-row ">
-                    <ul class="header__list">
-                      <li class="header__item">
-                        <a href="#" class="header__nav-link">Home</a>
-                      </li>
-                      <li class="header__item">
-                        <a href="./recipes.html" class="header__nav-link">Recipes</a>
-                      </li>
-                      <li class="header__item">
-                        <a href="./services.html" class="header__nav-link">Services</a>
-                        <div class="header__subnav">
-                          <ul class="sub__navlist">
-                            <li class="sub__nav-item">Food Catering</li>
-                            <li class="sub__nav-item">Drink & Beverages</li>
-                            <li class="sub__nav-item">Wedding & Birthday</li>
-                          </ul>
-                        </div>
-                      </li>
-                      <li class="header__item">
-                        <a href="./about.html" class="header__nav-link">About</a>
-                      </li>
-                      <li class="header__item">
-                        <a href="./news.html" class="header__nav-link">News</a>
-                      </li>
-                    </ul>
-                    <div class="header__button">
-                      <button><a href="./contact.html">CONTACT</a></button>
-                    </div>
+          <div class="container header__container">
+            <div class="header__row">
+              <div class="header__left">
+                <a href="./index.html"><img src="./assets/img/logo.png" alt="" class="header__logo"></a>
+              </div>
+              <div class="header__control">
+                  <img src="./assets/img/menu.png" alt="" class="header__control-btn">
+              </div>
+              <div class="header__right">
+                <div class="header__navlist header__navlist-row ">
+                  <ul class="header__list">
+                    <li class="header__item">
+                      <a href="./index.html" class="header__nav-link active">Home</a>
+                    </li>
+                    <li class="header__item">
+                      <a href="./recipes.html" class="header__nav-link">Recipes</a>
+                    </li>
+                    <li class="header__item">
+                      <a href="./services.html" class="header__nav-link">Services</a>
+                      <div class="header__subnav">
+                        <ul class="sub__navlist">
+                          <li class="sub__nav-item">Food Catering</li>
+                          <li class="sub__nav-item">Drink & Beverages</li>
+                          <li class="sub__nav-item">Wedding & Birthday</li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="header__item">
+                      <a href="./about.html" class="header__nav-link">About</a>
+                    </li>
+                    <li class="header__item">
+                      <a href="./news.html" class="header__nav-link">News</a>
+                    </li>
+                  </ul>
+                  <div class="header__button">
+                    <button><a href="./contact.html"><a href="./contact.html">CONTACT</a></a></button>
                   </div>
                 </div>
               </div>
             </div>
+          </div>
         </div>
 
         <!-- SLIDER -->
@@ -97,6 +100,131 @@
             </div>
         </div>
 
+        <!-- FORM CONTACT -->
+
+        <div class="contact beforeWhite">
+          <div class="contact__container container">
+            <div class="contact__row row">
+              <form action="" class="contact__form col-lg-6 col-md-6 col-sm-12 col-12">
+                <div class="contact__form-row row">
+                  <div class="contact__block col-lg-6 col-md-6 col-sm-6 col-12">
+                    <span class="contact__title">Name</span>
+                    <input id="name" type="text" class="contact__input">
+                    <p class="contact__message"></p>
+                  </div>
+
+                  <div class="contact__block col-lg-6 col-md-6 col-sm-6 col-12">
+                    <span class="contact__title">Phone</span>
+                    <input id="phone" type="text" class="contact__input">
+                    <p class="contact__message"></p>
+                  </div>
+                </div>
+
+                <div class="contact__form-row row">
+                  <div class="contact__block col-lg-12">
+                    <span class="contact__title">Email</span>
+                    <input id="email" type="text" class="contact__input">
+                    <p class="contact__message"></p>
+                  </div>
+                </div>
+
+                <div class="contact__form-row row">
+                  <div class="contact__block col-lg-12">
+                    <span class="contact__title">Email</span>
+                    <textarea id="message" type="text" class="contact__input"></textarea>
+                    <p class="contact__message"></p>
+                  </div>
+                </div>
+
+                <button class="contact__submit">SEND MESSAGE</button>
+              </form>
+              <div class="contact__detail col-lg-6 col-md-6 col-sm-12 col-12">
+                <div class="contact__detail-wrapper">
+                  <h4 class="contact__topic">
+                    Contact Details
+                  </h4>
+                  <div class="contact__info">
+                    <div class="contact__section">
+                      <img src="./assets/img/pin.png" alt="" class="contact__icon">
+                      <p class="contact__desc">34 Street Name, City Name Here, United States</p>
+                    </div>
+                    <div class="contact__section">
+                      <img src="./assets/img/phone (1).png" alt="" class="contact__icon">
+                      <p class="contact__desc">+1 242 4942 290</p>
+                    </div>
+                    <div class="contact__section">
+                      <img src="./assets/img/email.png" alt="" class="contact__icon">
+                      <p class="contact__desc">info@yourdomain.com</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi gray beforeGray afterGray">
+          <div class="testi__container container">
+            <div class="testi__row row">
+              <div class="testi__title col-lg-7 center">
+                <h3 class="testi__topic">TESTIMONIAL</h3>
+              </div>
+            </div>
+
+            <div class="swiper testi__slider">
+              <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                  <div class="row swiper__row">
+                    <div class="testi__block col-lg-7 col-md-7 col-sm-12 col-12">
+                      <p class="testi__comment">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+                      <div class="testi__talker">
+                        <img src="http://www.apnavacancy.com/wp-content/uploads/2022/03/chef-jobs-in-mumbai-for-freshers.jpg" alt="" class="testi__ava">
+                        <div class="testi__info">
+                          <p class="testi__name">Charles White</p>
+                          <p class="testi__position">CEO, XYZ company</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="row swiper__row">
+                    <div class="testi__block col-lg-7 col-md-7 col-sm-12 col-12">
+                      <p class="testi__comment">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+                      <div class="testi__talker">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQS2x1UFixinA7eM_nzbZfny_bG9oy4Ee0lng&usqp=CAU" alt="" class="testi__ava">
+                        <div class="testi__info">
+                          <p class="testi__name">Charles White</p>
+                          <p class="testi__position">CEO, XYZ company</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="row swiper__row">
+                    <div class="testi__block col-lg-7 col-md-7 col-sm-12 col-12">
+                      <p class="testi__comment">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+                      <div class="testi__talker">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Chef_Tom_Wandera_at_work.jpg" alt="" class="testi__ava">
+                        <div class="testi__info">
+                          <p class="testi__name">Charles White</p>
+                          <p class="testi__position">CEO, XYZ company</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+
 
         <!-- FOOTER -->
         <div class="footer">
@@ -106,7 +234,10 @@
                   <h4 class="footer__title">Subcribe Newsletter</h4>
                   <p class="footer__sub-heading">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur odit aut rerum hic minima, inventore harum eos vero, reiciendis doloribus, consectetur ab facere aspernatur nihil. Deleniti aut totam enim dolorum!</p>
                   <form action="" class="footer__form">
-                    <input type="text" id="email" class="footer__input " placeholder="Enter Email Address">
+                    <div class="footer__form-block">
+                      <input id="email" type="text" id="email" class="footer__input " placeholder="Enter Email Address">
+                      <p class="footer__form-message "></p>
+                    </div>
                     <button class="footer__button ">SUBSCRIBE</button>
                   </form>
                 </div>
@@ -118,10 +249,10 @@
                   <p class="footer__title">About Us</p>
                   <p class="footer__desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum maiores culpa sunt dolorem saepe pariatur cum odit! Enim, quod reprehenderit alias consequatur sit nemo, sequi doloribus, voluptatem mollitia expedita laboriosam.</p>
                   <div class="footer__icon">
-                    <a href="" class="footer__icon-item">icon</a>
-                    <a href="" class="footer__icon-item">icon</a>
-                    <a href="" class="footer__icon-item">icon</a>
-                    <a href="" class="footer__icon-item">icon</a>
+                  <a href=""><img class="footer__icon-item" src="./assets/img/twitter.png" alt=""></a>
+                  <a href=""><img class="footer__icon-item" src="./assets/img/facebook.png" alt=""></a>
+                  <a href=""><img class="footer__icon-item" src="./assets/img/linkedin.png" alt=""></a>
+                  <a href=""><img class="footer__icon-item" src="./assets/img/instagram.png" alt=""></a>
                   </div>
                 </div>
   
@@ -177,5 +308,46 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     <script src="./javascipt/slider.js"></script>
+    <script src="./javascipt/header.js"></script>
+    <script src="./javascipt/validation.js"></script>
+    <script>
+      Validator({
+        form:'.footer__form',
+        input:'.footer__input',
+        formGroupSelect:'.footer__form-block',
+        errorSelector: '.footer__form-message',
+        rules:[
+          Validator.isRequired('#email'),
+          Validator.isEmail('#email')
+        ],
+        onSubmit:(data)=>{
+          console.log(data)
+        }
+
+      })
+    </script>
+
+    <script>
+      Validator({
+        form:'.contact__form',
+        input:'.contact__input',
+        formGroupSelect:'.contact__block',
+        errorSelector: '.contact__message',
+        rules:[
+          Validator.isRequired('#name'),
+          Validator.isRequired('#phone'),
+          Validator.isNumber('#phone'),
+          Validator.isLengthRequired('#phone',9),
+          Validator.isRequired('#email'),
+          Validator.isEmail('#email'),
+          Validator.isRequired('#message'),
+          Validator.isLengthRequired('#message',50),
+        ],
+        onSubmit:(data)=>{
+          console.log(data)
+        }
+
+      })
+    </script>
 </body>
 </html>

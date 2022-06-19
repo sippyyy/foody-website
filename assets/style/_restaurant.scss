@@ -2,7 +2,7 @@
 @import 'mixins';
 
 .restaurant{
-    // padding: $padding-content 0;
+    margin: $padding-content 0;
     position: relative;
     z-index: 2;
     &__row{

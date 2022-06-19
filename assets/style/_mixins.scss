@@ -38,6 +38,10 @@
     font-size: $title-size;
     font-weight: 800;
     color: #000;
+
+    @media (max-width:768px) {
+        font-size: 4rem;
+    }
 }
 
 @mixin separatedTitle {
@@ -49,3 +53,8 @@
     left: 50%;
     transform: translateX(-50%);
 }
+
+@mixin textSlider($textSlider: $text-slider) {
+    font-size: $textSlider;
+}
+
