@@ -4,6 +4,22 @@
 .special{
     padding-bottom: $space-48;
     margin-bottom: $space-48;
+
+    @media (min-width: 1000px){
+        .specialSwiper{
+            transform: translateX(-20%);
+            opacity: 0;
+        }
+
+        &.open{
+            & .specialSwiper{
+                transform: translateX(0);
+                opacity: 1;
+                transition: all ease-in-out 0.4s ;
+            }
+        }
+    }
+
     &__row{
         justify-content: center;
         margin-bottom: $space-48;

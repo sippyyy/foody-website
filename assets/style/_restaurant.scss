@@ -5,6 +5,39 @@
     margin: $padding-content 0;
     position: relative;
     z-index: 2;
+
+    @media (min-width: 1000px) {
+        .restaurant{
+            &__img-block1{
+                opacity: 0;
+            };
+            &__img-landscape{
+                opacity: 0;
+            }
+        }
+        &.open {
+            & .restaurant__img-block1{
+                &:first-child{
+                    opacity: 1;
+                    transition: opacity linear 0.3s;
+                }
+                &:last-child{
+                    opacity: 1;
+                    transition: opacity linear 0.3s 0.6s;
+                }
+            }
+            & .restaurant__img-landscape{
+                &:first-child{
+                    opacity: 1;
+                    transition: opacity linear 0.3s 0.2s;
+                }
+                &:last-child{
+                    opacity: 1;
+                    transition: opacity linear 0.3s 0.4s;
+                }
+            }
+        }
+    }
     &__row{
         margin-bottom: $space-48;
     }
@@ -35,6 +68,8 @@
             align-items: center;
         }
     }
+
+
 
     &__img-block2{
         flex-direction: column;

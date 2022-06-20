@@ -7,6 +7,58 @@
     background-color: $darkerWhite;
     z-index: 3;
 
+    @media (min-width: 1000px) {
+        .menu__dish{
+            transform: translateY(10%);
+            opacity: 0;
+        }
+
+        &.open{
+            & .menu__dish{
+                &:first-child{
+                    opacity: 1;
+                    transform: translateY(0);
+                    transition: all linear 0.3s;
+                }
+                &:nth-child(2){
+                    opacity: 1;
+                    transform: translateY(0);
+                    transition: all linear 0.3s 0.2s;
+                }
+                &:nth-child(3){
+                    opacity: 1;
+                    transform: translateY(0);
+                    transition: all linear 0.3s 0.4s;
+                }
+                &:nth-child(4){
+                    opacity: 1;
+                    transform: translateY(0);
+                    transition: all linear 0.3s 0.6s;
+                }
+                &:nth-child(5){
+                    opacity: 1;
+                    transform: translateY(0);
+                    transition: all linear 0.3s 0.8s;
+                }
+                &:nth-child(6){
+                    opacity: 1;
+                    transform: translateY(0);
+                    transition: all linear 0.3s 1s;
+                }
+                &:nth-child(7){
+                    opacity: 1;
+                    transform: translateY(0);
+                    transition: all linear 0.3s 1.2s;
+                }
+                &:nth-child(8){
+                    opacity: 1;
+                    transform: translateY(0);
+                    transition: all linear 0.3s 1.4s;
+                }
+            }
+        }
+    }
+
     &__row{
         justify-content: center;
         padding-bottom: $space-48;
