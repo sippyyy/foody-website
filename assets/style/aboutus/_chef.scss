@@ -6,6 +6,19 @@
     position: relative;
     background-color: $darkerWhite;
 
+    @media (min-width: 1000px) {
+        .chefSwiper{
+            transform: translateY(20%);
+            opacity: 0;
+        }
+
+        &.open{
+            & .chefSwiper{
+                @include animation
+            }
+        }
+    }
+
     &__row{
         justify-content: center;
         margin-bottom: $space-48;

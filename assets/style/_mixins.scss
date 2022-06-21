@@ -58,3 +58,35 @@
     font-size: $textSlider;
 }
 
+@mixin animation($delay:0s){
+    opacity: 1;
+    transition: all linear 0.3s $delay;
+    transform: translateY(0);
+}
+
+@mixin mixChildAnimation {
+    &:first-child{
+        @include animation
+    }
+    &:nth-child(2){
+        @include animation(0.2s)
+    }
+    &:nth-child(3){
+        @include animation(0.4s)
+    }
+    &:nth-child(4){
+        @include animation(0.6s)
+    }
+    &:nth-child(5){
+        @include animation(0.8s)
+    }
+    &:nth-child(6){
+        @include animation(1s)
+    }
+    &:nth-child(7){
+        @include animation(1.2s)
+    }
+    &:nth-child(8){
+        @include animation(1.4s)
+    }
+}

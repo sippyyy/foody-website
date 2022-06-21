@@ -4,12 +4,21 @@
 
 .slider{
     position: relative;
+
+    
+
+        @media (max-width:768px) {
+            &__content{
+                background-color: rgba(0,0,0,0.4);
+            }
+        }
     
     &__block{
         width: 100%;
         height: 900px;
         @include display(flex,center);
         align-items: center;
+
         background-image: url('https://images.pexels.com/photos/2072867/pexels-photo-2072867.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" class="slider__img');
         background-repeat: no-repeat;
         background-size: cover;
@@ -35,6 +44,7 @@
         animation: flowUp linear 0.8s;
     }
 
+
     &__title{
         @include textSlider($text-slider);
         color:$white;
@@ -43,7 +53,7 @@
         transition: font-size 0.4s linear;
 
         @media (max-width:768px) {
-            @include textSlider(4rem)
+            @include textSlider(4rem);
         }
     }
 
@@ -60,6 +70,8 @@
         overflow: hidden;
         position: relative;
         transition: all 0.2s linear;
+        z-index: 3;
+        margin-bottom: $space-16;
 
         &::after{
             content: '';
